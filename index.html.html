@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Exprimido – Jugos naturales</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--mango:#FFB400;--hoja:#0F3D2E;--mora:#4B1659;--sandia:#E8364B;--lima:#9BCB1F;--blanco:#FFFDF7;
+--display:'Bricolage Grotesque','Arial Black',sans-serif;--body:'Figtree',system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--blanco);color:var(--hoja);font-family:var(--body);font-size:1.05rem;line-height:1.55}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--hoja);outline-offset:3px}
+.hero{background:var(--mango);position:relative;overflow:hidden;padding:clamp(28px,6vw,72px) clamp(20px,6vw,80px) clamp(48px,8vw,110px)}
+.top{display:flex;justify-content:space-between;align-items:center;font-family:var(--display);font-weight:800;font-size:1.3rem}
+.top a{font-family:var(--body);font-weight:600;font-size:1rem;text-decoration:none;border:2px solid var(--hoja);padding:8px 18px;border-radius:99px}
+.top a:hover{background:var(--hoja);color:var(--mango)}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(3rem,12vw,9rem);line-height:.92;letter-spacing:-.03em;margin:clamp(40px,8vw,100px) 0 24px;max-width:9ch}
+.hero p{max-width:34ch;font-size:1.2rem;margin:0 0 28px}
+.btn{display:inline-block;background:var(--hoja);color:var(--blanco);font-weight:600;text-decoration:none;padding:15px 28px;border-radius:99px}
+.btn:hover{background:var(--mora)}
+.slice{position:absolute;right:clamp(-120px,-8vw,-40px);bottom:clamp(-100px,-6vw,-30px);width:clamp(260px,46vw,620px);aspect-ratio:1;border-radius:50%;
+background:radial-gradient(circle,#FFF3D6 0 7%,transparent 7.5%),repeating-conic-gradient(from 0deg,#FF8A00 0 14deg,#FFC24A 14deg 15.5deg,#FF8A00 15.5deg 29deg,#FFF3D6 29deg 30deg);
+box-shadow:0 0 0 clamp(10px,2vw,26px) #FFF3D6,0 0 0 clamp(20px,4vw,52px) #F27A00}
+@media (prefers-reduced-motion:no-preference){.slice{animation:giro 40s linear infinite}@keyframes giro{to{transform:rotate(360deg)}}}
+.menu h2{font-family:var(--display);font-weight:800;font-size:clamp(1.6rem,4vw,2.4rem);margin:0;padding:clamp(32px,5vw,56px) clamp(20px,6vw,80px) 20px}
+.fila{display:grid;grid-template-columns:1fr auto;gap:8px 24px;align-items:end;padding:clamp(24px,4vw,44px) clamp(20px,6vw,80px)}
+.fila h3{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,8vw,5.5rem);line-height:1;letter-spacing:-.02em;margin:0;grid-column:1/-1}
+.fila p{margin:0;max-width:44ch}
+.fila .precio{font-family:var(--display);font-weight:800;font-size:clamp(1.6rem,4vw,2.6rem);text-align:right}
+.fila a{grid-column:1/-1;justify-self:start;margin-top:8px;font-weight:600;border:2px solid currentColor;padding:10px 22px;border-radius:99px;text-decoration:none}
+.fila a:hover{background:var(--hoja);color:var(--blanco);border-color:var(--hoja)}
+.naranja{background:#FF8A00;color:var(--hoja)}.maracuya{background:var(--mango);color:var(--hoja)}
+.mora{background:var(--mora);color:#FFF3FB}.mora a:hover{background:#FFF3FB;color:var(--mora);border-color:#FFF3FB}
+.sandia{background:var(--sandia);color:#fff}.sandia a:hover{background:#fff;color:var(--sandia);border-color:#fff}
+.lima{background:var(--lima);color:var(--hoja)}
+.pie{background:var(--hoja);color:#E8F4EA;padding:clamp(36px,6vw,72px) clamp(20px,6vw,80px)}
+.pie h2{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,5vw,3.2rem);margin:0 0 12px;color:var(--mango)}
+.pie p{margin:0 0 22px;max-width:46ch}
+.pie .btn{background:var(--mango);color:var(--hoja)}
+.pie small{display:block;margin-top:36px;opacity:.75}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="top"><span>Exprimido</span></div>
+  <h1>Jugo recién exprimido</h1>
+  <p>Fruta fresca, sin azúcar añadida, hecho al momento.</p>
+  <a class="btn" href="#menu">Ver el menú</a>
+  <div class="slice" aria-hidden="true"></div>
+</header>
+
+<main id="menu" class="menu">
+  <h2>Menú</h2>
+  <section class="fila naranja"><h3>Naranja</h3><p>Naranja de la sierra, exprimida al pedido. Sin agua ni hielo, si lo prefieres.</p><div class="precio">$2.50</div></section>
+  <section class="fila maracuya"><h3>Maracuyá</h3><p>Ácido y aromático. Se sirve frío, endulzado solo si lo pides.</p><div class="precio">$2.75</div></section>
+  <section class="fila mora"><h3>Mora</h3><p>Mora de Castilla licuada con leche o con agua. Tú escoges.</p><div class="precio">$3.00</div></section>
+  <section class="fila sandia"><h3>Sandía</h3><p>Pura sandía con hielo. Lo más fresco para el calor de la tarde.</p><div class="precio">$2.25</div></section>
+  <section class="fila lima"><h3>Limonada</h3><p>Limón sutil, hierbaluisa y hielo frapé.</p><div class="precio">$2.00</div></section>
+</main>
+
+<footer id="pedir" class="pie">
+  <h2>Ven por tu jugo</h2>
+  <p>Cada jugo se exprime al momento. Pregunta por los jugos del día.</p>
+</footer>
+</body>
+</html>
